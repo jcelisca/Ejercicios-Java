@@ -1,6 +1,6 @@
-package ejercicio17.ejercicio18;
+package ejercicio18;
 
-public class Serie {
+public class Serie  implements Entregable {
     private String titulo;
     private int nroTemporadas = 3;
     private boolean entregado = false;
@@ -60,6 +60,21 @@ public class Serie {
     public String toString() {
         return "Serie [Creador= " + creador + ", Entregado= " + entregado + ", Genero= " + genero + ", Nro temporadas= "
                 + nroTemporadas + ", Titulo= " + titulo + "]";
+    }
+
+    @Override
+    public void entregar() {
+        this.entregado = true;
+    }
+
+    @Override
+    public void devolver() {
+        this.entregado = false;
+    }
+
+    @Override
+    public boolean isEntregado() {
+        return this.entregado;
     }
 
 }

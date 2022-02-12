@@ -1,4 +1,4 @@
-package ejercicio17.ejercicio18;
+package ejercicio18;
 
 public class MainSerie {
     public static void main(String[] args) {

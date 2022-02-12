@@ -1,6 +1,6 @@
-package ejercicio17.ejercicio18;
+package ejercicio18;
 
-public class Videojuego {
+public class Videojuego implements Entregable {
     private String titulo;
     private int horas_estimadas = 10;
     private boolean entregado = false;
@@ -58,6 +58,21 @@ public class Videojuego {
     public String toString() {
         return "Videojuego [Compañia= " + compañia + ", Entregado= " + entregado + ", Genero= " + genero
                 + ", Horas estimadas= " + horas_estimadas + ", Titulo= " + titulo + "]";
+    }
+
+    @Override
+    public void entregar() {
+        this.entregado = true;
+    }
+
+    @Override
+    public void devolver() {
+        this.entregado = false;
+    }
+
+    @Override
+    public boolean isEntregado() {
+        return this.entregado;
     }
     
 }
