@@ -74,5 +74,11 @@ public class Videojuego implements Entregable {
     public boolean isEntregado() {
         return this.entregado;
     }
+
+    @Override
+    public int compareTo(Object[] a) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
     
 }
