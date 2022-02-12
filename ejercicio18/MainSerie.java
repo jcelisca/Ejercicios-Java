@@ -13,10 +13,18 @@ public class MainSerie {
 
         game[0] = new Videojuego();
         game[1] = new Videojuego("Super Mario Bros", 3, "Videojuego de plataformas", "Nintendo");
-        game[2] = new Videojuego("Resident Evil 4", 8, "Survival Horror", "CAPCOM");
-        game[3] = new Videojuego("Call Of Duty", 10, "Disparos primera persona", "Activision");
-        game[4] = new Videojuego("FIFA", 12, "Videojuego de deportes", "Electronic Arts");
+        game[2] = new Videojuego("Resident Evil 4", 9, "Survival Horror", "CAPCOM");
+        game[3] = new Videojuego("Call Of Duty", 11, "Disparos primera persona", "Activision");
+        game[4] = new Videojuego("FIFA", 10, "Videojuego de deportes", "Electronic Arts");
 
+        serie[2].entregar();
+        serie[4].entregar();
+        game[1].entregar();
+        game[3].entregar();
+        game[4].entregar();
+
+        entregados(serie);
+        entregados(game);
         compareTo(serie);
         compareTo(game);
     }
@@ -42,6 +50,28 @@ public class MainSerie {
                 }
             }
             System.out.println("\nEl videojuego con mas horas estimadas tiene "+mayor+" horas.\n"+vGame);
+        }
+    }
+
+    private static void entregados(Object[] a){
+        int count = 0;
+        if(a instanceof Serie[]){
+            for(Object e: a){
+                if(((Serie) e).isEntregado()){
+                    System.out.println(e);
+                    count++;
+                }
+            }
+            System.out.println("Hay "+count+" series entregadas.\n");
+        }
+        if(a instanceof Videojuego[]){
+            for(Object e: a){
+                if(((Videojuego)e).isEntregado()){
+                    System.out.println(e);
+                    count++;
+                }
+            }
+            System.out.println("Hay "+count+" videojuegos entregadas.\n");
         }
     }
 }
