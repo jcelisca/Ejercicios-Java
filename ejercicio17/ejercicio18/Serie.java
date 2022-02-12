@@ -2,14 +2,12 @@ package ejercicio17.ejercicio18;
 
 public class Serie {
     private String titulo;
-    private int nroTemporadas;
-    private boolean entregado;
+    private int nroTemporadas = 3;
+    private boolean entregado = false;
     private String genero;
     private String creador;
 
     public Serie() {
-        this.nroTemporadas = 3;
-        this.entregado = false;
     }
 
     public Serie(String titulo, String creador) {
@@ -64,7 +62,4 @@ public class Serie {
                 + nroTemporadas + ", Titulo= " + titulo + "]";
     }
 
-    
-
-    
 }
